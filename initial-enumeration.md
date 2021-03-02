@@ -55,6 +55,7 @@ Connect and check for service running
 ### SMTP - Port 25
 Check for SMTP vulns 
 Check version with HELO / HELLO <domain>  
+snmp-check - UDP port 169
 
 ### POP - PORT 110 
 ````
