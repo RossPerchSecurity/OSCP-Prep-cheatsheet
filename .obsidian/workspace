@@ -87,14 +87,14 @@
   },
   "lastOpenFiles": [
     "Reverse-Shells.md",
-    "file_transfer.md",
-    "initial-enumeration.md",
-    "linux-command-stash.md",
-    "linux-exploits.md",
-    "windows-exploits.md",
     "linux-privesc.md",
-    "windows-command-stash.md",
+    "linux-exploits.md",
+    "initial-enumeration.md",
+    "windows-privesc.md",
+    "windows-exploits.md",
+    "linux-command-stash.md",
+    "file_transfer.md",
     "README.md",
-    "windows-privesc.md"
+    "windows-command-stash.md"
   ]
 }

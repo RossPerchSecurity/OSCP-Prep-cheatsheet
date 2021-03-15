@@ -215,6 +215,10 @@ cat /var/apache2/config.inc
 cat /var/lib/mysql/mysql/user.MYD
 cat /root/anaconda-ks.cfg
 
+# If you have db creds for mysql, make sure to enumerate ALL databases for possible user credentials
+
+MYSQL Show plugin directories - SHOW VARIABLES WHERE Variable_Name LIKE "%dir"
+
 cat ~/.bash_history
 cat ~/.nano_history
 cat ~/.atftp_history

